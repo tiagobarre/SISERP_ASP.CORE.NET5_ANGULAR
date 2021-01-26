@@ -1,0 +1,148 @@
+
+<script src="../../../assets/js/Jquery3/jquery.min.js"></script>
+
+<section>
+    <!-- Left Sidebar -->
+    <aside id="leftsidebar" class="sidebar">
+        <!-- User Info -->
+        <div class="user-info">
+
+
+            <div style="text-align:center; padding-top:10px">
+
+              
+                <img src="../../../assets/Arquivos/Fotos/user.png" width="75" height="75" style="border-radius:40px" />
+
+            </div>
+
+
+            <div style="padding-top:5px">
+
+                <div data-toggle="dropdown" style="text-align:center; color:white">
+                   Tiago Barreto
+                </div>
+
+                <br />
+
+            </div>
+
+
+
+
+
+        </div>
+        <!-- #User Info -->
+        <!-- Menu -->
+        <div class="menu">
+            <ul class="list">
+                <li class="header">SISTEMA</li>
+
+                <li>
+                    <a href="/home">
+                        <i class="material-icons">home</i>
+                        <span>HOME</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a >
+                        <i class="material-icons">security</i>
+                        <span>ALTERAR SENHA</span>
+                    </a>
+                </li>
+                <li>
+                    <a (click)='Sair()'>
+                        <i class="material-icons">input</i>
+                        <span>SAIR DO SISTEMA</span>
+                    </a>
+                </li>
+
+
+
+
+                <li class="header">PAINEL DE NAVEGAÇÃO</li>
+
+             
+            </ul>
+        </div>
+        <!-- #Menu -->
+        <!-- Footer -->
+        <div class="legal">
+            <div class="copyright" style="font-size:15px">
+                &copy; 2020 <a>SISPOSTO</a>
+            </div>
+
+        </div>
+        <!-- #Footer -->
+    </aside>
+    <!-- #END# Left Sidebar -->
+    <!-- Right Sidebar -->
+    <aside id="rightsidebar" class="right-sidebar">
+        <ul class="nav nav-tabs tab-nav-right" role="tablist">
+            <li role="presentation" class="active"><a href="#skins" data-toggle="tab">SKINS</a></li>
+            <li role="presentation"><a href="#settings" data-toggle="tab">SETTINGS</a></li>
+        </ul>
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade in active in active" id="skins">
+                <ul class="demo-choose-skin">
+
+                    <li data-theme="indigo" class="active">
+                        <div class="indigo"></div>
+                        <span>Indigo</span>
+                    </li>
+
+                </ul>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="settings">
+                <div class="demo-settings">
+                    <p>GENERAL SETTINGS</p>
+                    <ul class="setting-list">
+                        <li>
+                            <span>Report Panel Usage</span>
+                            <div class="switch">
+                                <label><input type="checkbox" checked><span class="lever"></span></label>
+                            </div>
+                        </li>
+                        <li>
+                            <span>Email Redirect</span>
+                            <div class="switch">
+                                <label><input type="checkbox"><span class="lever"></span></label>
+                            </div>
+                        </li>
+                    </ul>
+                    <p>SYSTEM SETTINGS</p>
+                    <ul class="setting-list">
+                        <li>
+                            <span>Notifications</span>
+                            <div class="switch">
+                                <label><input type="checkbox" checked><span class="lever"></span></label>
+                            </div>
+                        </li>
+                        <li>
+                            <span>Auto Updates</span>
+                            <div class="switch">
+                                <label><input type="checkbox" checked><span class="lever"></span></label>
+                            </div>
+                        </li>
+                    </ul>
+                    <p>ACCOUNT SETTINGS</p>
+                    <ul class="setting-list">
+                        <li>
+                            <span>Offline</span>
+                            <div class="switch">
+                                <label><input type="checkbox"><span class="lever"></span></label>
+                            </div>
+                        </li>
+                        <li>
+                            <span>Location Permission</span>
+                            <div class="switch">
+                                <label><input type="checkbox" checked><span class="lever"></span></label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <!-- #END# Right Sidebar -->
+</section>

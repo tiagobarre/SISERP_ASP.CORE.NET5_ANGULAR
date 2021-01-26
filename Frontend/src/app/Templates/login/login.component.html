@@ -1,0 +1,93 @@
+
+
+<div class="login-page" id="login"> 
+  <div class="login-box">
+      <div class="logo">
+        <br/>
+          <a>SISERP</a>
+          <small>Sistema de gerenciamento ERP</small>
+      </div>
+      <div class="card">
+          <div class="body">
+              <form id="sign_in"  
+              *ngIf="!isLoggedIn"
+              name="form"
+              (ngSubmit)="f.form.valid && onSubmit()"
+              #f="ngForm"
+              novalidate>                 
+                 <div class="row m-t-15 m-b--20" style="text-align: center;">
+                  <div class="form-group">
+                      <div
+                        class="alert alert-danger"
+                        role="alert"
+                        *ngIf="f.submitted && isLoginFailed"
+                      >
+                        {{ errorMessage }}
+                      </div>
+                    </div>
+                    <br/>
+              </div>
+
+                  <div class="input-group">
+                      <span class="input-group-addon">
+                          <i class="material-icons" for="username">person</i>
+                      </span>
+                      <div class="form-line">
+                          <input type="text" class="form-control"  type="text"
+                          class="form-control"
+                          name="username"
+                          [(ngModel)]="form.username"
+                          required
+                          #username="ngModel" 
+                          placeholder="Username" 
+                          required autofocus>
+                      </div>
+                      <div style="color: red;"
+                      class=""
+                      role="alert"
+                      *ngIf="username.errors && f.submitted">
+                      Informe o login!
+                    </div>
+                  </div>
+                  <div class="input-group">
+                      <span class="input-group-addon">
+                          <i class="material-icons" for="password">lock</i>
+                      </span>
+                      <div class="form-line">
+                          <input type="password" class="form-control" 
+                          type="password"
+                          class="form-control"
+                          name="password"
+                          [(ngModel)]="form.password"
+                          required
+                          minlength="1"
+                          #password="ngModel" 
+                          placeholder="Password" required>
+                      </div>
+                      <div
+                      style="color: red;"
+                      role="alert"
+                      *ngIf="password.errors && f.submitted"
+                    >
+                      <div *ngIf="password.errors.required">Informe a senha!</div>
+                     
+                    </div>
+                  </div>
+                  <div class="row">
+                      
+                      <div class="col-xs-4">
+                          <button class="btn btn-block bg-pink waves-effect">Login</button>
+                      </div>
+                  </div>
+                 
+              </form>
+              <div class="alert alert-success" *ngIf="isLoggedIn">
+                  Logged in as {{ roles }}.
+                </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Jquery Core Js -->
+
+</div>

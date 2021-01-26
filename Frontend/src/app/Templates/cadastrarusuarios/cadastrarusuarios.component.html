@@ -1,0 +1,381 @@
+<app-aside ></app-aside>
+<app-navbar ></app-navbar>
+
+
+
+
+<div class="container-fluid" style="max-width:1000px;">
+
+  <div class="row clearfix">
+      <div class="col-lg-12 col-md-12 col-sm- col-xs-12">
+          <div class="card" style="border-radius: 15px; border-width: 2px;border-style: groove;border-color: black; border-radius:10px;">
+
+
+              <form method="post" enctype="multipart/form-data" class="container-fluid">
+
+                  <div class="body">
+                      <div style="text-align:center; padding-top: 0px">
+                       
+
+                          <strong style="font-size:12px"> Cadastrar Novo Usuário </strong>
+                          <div style="padding-top:10px"></div>
+                      </div>
+                      <hr style="border-color:black" />
+
+
+                     
+
+
+
+                      <script>
+                          // Limitar a quantidade de arquivos no input file
+                          $(function () {
+                              $("input[type='submit']").click(function () {
+                                  var $fileUpload = $("input[type='file']");
+                                  if (parseInt($fileUpload.get(0).files.length) > 2) {
+                                      alert("You can only upload a maximum of 2 files");
+                                  }
+                              });
+                          });
+                      </script>
+
+                      <script>
+                          $(function () {
+                              // Pré-visualização de várias imagens no navegador
+                              var visualizacaoImagens = function (input, lugarParaInserirVisualizacaoDeImagem) {
+
+                                  if (input.files) {
+                                      var quantImagens = input.files.length;
+
+                                      for (i = 0; i < quantImagens; i++) {
+                                          var reader = new FileReader();
+
+                                          reader.onload = function (event) {
+                                              $($.parseHTML('<img class="miniatura" style="max-height:120px; max-width:90px; border-radius:10px; border: thick groove rgb(173,216,230);">')).attr('src', event.target.result).appendTo(lugarParaInserirVisualizacaoDeImagem);
+                                          }
+
+                                          reader.readAsDataURL(input.files[i]);
+                                      }
+                                  }
+
+                              };
+
+                              $('#addFotoGaleria2').on('change', function () {
+                                  visualizacaoImagens(this, 'div.galeria2');
+                              });
+                          });
+                      </script>
+
+
+                      <div>
+
+                         
+                          <br />
+
+
+
+                          <div class="col-sm-6">
+                              <div class="input-group">
+
+                                  <span class="input-group-addon">
+                                      <i class="material-icons" style="font-size:20px">person</i>
+                                  </span>
+                                  <div class="form-line">
+
+
+                                      <input asp-for="nome" type="text" id="nome" class="form-control date" placeholder="Nome" style="font-size: 12px; text-align:center" maxlength="50" required>
+                                  </div>
+
+                              </div>
+                          </div>
+                          <script>
+                              $("#nome").on("input", function () {
+
+                                  $(this).val($(this).val().toUpperCase());
+                              });
+                          </script>
+                          <div class="col-sm-6">
+                              <div class="input-group">
+
+                                  <span class="input-group-addon">
+                                      <i class="material-icons" style="font-size:20px">email</i>
+                                  </span>
+                                  <div class="form-line">
+
+
+                                      <input asp-for="email" type="text" id="email" class="form-control date" placeholder="E-mail" style="font-size: 12px; text-align:center" maxlength="50">
+                                  </div>
+
+                              </div>
+                          </div>
+                          <script>
+                              $("#email").on("input", function () {
+
+                                  $(this).val($(this).val().toUpperCase());
+                              });
+                          </script>
+                          <div class="col-sm-3">
+                              <div class="input-group">
+
+                                  <span class="input-group-addon">
+                                      <i class="material-icons" style="font-size:20px">card_giftcard</i>
+                                  </span>
+                                  <div class="form-line">
+
+
+                                      <input asp-for="cpf" type="text" id="cpf" class="form-control date" onkeypress="MascaraCPF( this, event )" placeholder="CPF" style="font-size: 12px; text-align:center" maxlength="14" required>
+                                  </div>
+
+                              </div>
+                          </div>
+
+                          <div class="col-sm-3">
+                              <div class="input-group">
+
+                                  <span class="input-group-addon">
+                                      <i class="material-icons" style="font-size:20px">card_giftcard</i>
+                                  </span>
+                                  <div class="form-line">
+
+
+                                      <input asp-for="rg" type="text" id="rg" class="form-control date" placeholder="RG" style="font-size: 12px; text-align:center" maxlength="20">
+                                  </div>
+
+                              </div>
+                          </div>
+                          <div class="col-sm-3">
+                              <div class="input-group">
+
+                                  <span class="input-group-addon">
+                                      <i class="material-icons" style="font-size:20px">phone</i>
+                                  </span>
+                                  <div class="form-line">
+
+
+                                      <input asp-for="telefone" type="text" id="telefone" class="form-control date" onkeypress="MascaraTelefone(this, event)" placeholder="Telefone" style="font-size: 12px; text-align:center" maxlength="14">
+                                  </div>
+
+                              </div>
+                          </div>
+                          <div class="col-sm-3">
+                              <div class="input-group">
+
+                                  <span class="input-group-addon">
+                                      <i class="material-icons" style="font-size:20px">smartphone</i>
+                                  </span>
+                                  <div class="form-line">
+
+
+                                      <input asp-for="celular" type="text" id="celular" onkeypress="MascaraTelefone2(this, event)" class="form-control date" placeholder="Celular" style="font-size: 12px; text-align:center" maxlength="15">
+                                  </div>
+
+
+                              </div>
+                          </div>
+                          <script>
+                              //adiciona mascara ao telefone
+                              function MascaraTelefone2(tel) {
+                                  if (mascaraInteiro(tel) == false) {
+                                      event.returnValue = false;
+                                  }
+                                  return formataCampo(tel, '(00) 00000-0000', event);
+                              }
+
+                          </script>
+
+
+                          <div class="col-sm-8">
+                              <div class="input-group">
+
+                                  <span class="input-group-addon">
+                                      <i class="material-icons" style="font-size:20px">location_on</i>
+                                  </span>
+                                  <div class="form-line">
+
+
+                                      <input asp-for="logradouro" type="text" id="logradouro" class="form-control date" placeholder="Logradouro" style="font-size: 12px; text-align:center" maxlength="80" required>
+                                  </div>
+
+                              </div>
+                          </div>
+                          <script>
+                              $("#logradouro").on("input", function () {
+
+                                  $(this).val($(this).val().toUpperCase());
+                              });
+                          </script>
+
+                          <div class="col-sm-4">
+                              <div class="input-group">
+
+                                  <span class="input-group-addon">
+                                      <i class="material-icons" style="font-size:20px">location_on</i>
+                                  </span>
+                                  <div class="form-line">
+
+
+                                      <input asp-for="cidade" type="text" id="cidade" class="form-control date" placeholder="Cidade" style="font-size: 12px; text-align:center" maxlength="80" required>
+                                  </div>
+
+                              </div>
+                          </div>
+                          <script>
+                              $("#cidade").on("input", function () {
+
+                                  $(this).val($(this).val().toUpperCase());
+                              });
+                          </script>
+                          <div class="col-sm-5">
+                              <div class="input-group">
+
+                                  <span class="input-group-addon">
+                                      <i class="material-icons" style="font-size:20px">location_on</i>
+                                  </span>
+                                  <div class="form-line">
+
+
+                                      <input asp-for="bairro" type="text" id="bairro" class="form-control date" placeholder="Bairro" style="font-size: 12px; text-align:center" maxlength="80" required>
+                                  </div>
+
+                              </div>
+                          </div>
+                          <script>
+                              $("#bairro").on("input", function () {
+
+                                  $(this).val($(this).val().toUpperCase());
+                              });
+                          </script>
+                          <div class="col-sm-4">
+                              <div class="input-group">
+
+                                  <span class="input-group-addon">
+                                      <i class="material-icons" style="font-size:20px">location_on</i>
+                                  </span>
+                                  <div class="form-line">
+
+                                      <select asp-for="uf" required>
+                                          <option>--</option>
+                                          <option value="AC">Acre</option>
+                                          <option value="AL">Alagoas</option>
+                                          <option value="AP">Amapá</option>
+                                          <option value="AM">Amazonas</option>
+                                          <option value="BA">Bahia</option>
+                                          <option value="CE">Ceará</option>
+                                          <option value="DF">Distrito Federal</option>
+                                          <option value="ES">Espírito Santo</option>
+                                          <option value="GO">Goiás</option>
+                                          <option value="MA">Maranhão</option>
+                                          <option value="MT">Mato Grosso</option>
+                                          <option value="MS">Mato Grosso do Sul</option>
+                                          <option value="MG">Minas Gerais</option>
+                                          <option value="PA">Pará</option>
+                                          <option value="PB">Paraíba</option>
+                                          <option value="PR">Paraná</option>
+                                          <option value="PE">Pernambuco</option>
+                                          <option value="PI">Piauí</option>
+                                          <option value="RJ">Rio de Janeiro</option>
+                                          <option value="RN">Rio Grande do Norte</option>
+                                          <option value="RS">Rio Grande do Sul</option>
+                                          <option value="RO">Rondônia</option>
+                                          <option value="RR">Roraima</option>
+                                          <option value="SC">Santa Catarina</option>
+                                          <option value="SP">São Paulo</option>
+                                          <option value="SE">Sergipe</option>
+                                          <option value="TO">Tocantins</option>
+                                          <option value="EX">Estrangeiro</option>
+                                      </select>
+
+                                  </div>
+
+                              </div>
+                          </div>
+
+                          <div class="col-sm-3">
+                              <div class="input-group">
+
+                                  <span class="input-group-addon">
+                                      <i class="material-icons" style="font-size:20px">assignment</i>
+                                  </span>
+                                  <div class="form-line">
+
+
+                                      <input asp-for="cep" type="text" id="cep" class="form-control date" placeholder="CEP" onkeypress="MascaraCep(this, event)" style="font-size: 12px; text-align:center" maxlength="10">
+                                  </div>
+
+                              </div>
+                          </div>
+
+                          <div class="col-sm-6">
+                              <div class="input-group">
+
+                                  <span class="input-group-addon">
+                                      <i class="material-icons" style="font-size:20px">person_pin</i>
+                                  </span>
+                                  <div class="form-line">
+
+
+                                      <input asp-for="login" type="text" id="login" class="form-control date" placeholder="Login" style="font-size: 12px; text-align:center" maxlength="50" required>
+                                  </div>
+
+                              </div>
+                          </div>
+                          <div class="col-sm-6">
+                              <div class="input-group">
+
+                                  <span class="input-group-addon">
+                                      <i class="material-icons" style="font-size:20px">vpn_key</i>
+                                  </span>
+                                  <div class="form-line">
+
+
+                                      <input asp-for="senha" type="password" id="senha" class="form-control date" placeholder="Senha" style="font-size: 12px; text-align:center" maxlength="50" required>
+                                  </div>
+
+                              </div>
+                          </div>
+
+
+                        
+                          <div style="text-align:center" class="col-sm-12">
+
+                              <button type="submit" class="btn bg-blue waves-effect" style="border-radius: 10px; ">
+                                  <i class="material-icons">save</i>
+
+                              </button>
+
+
+
+                          </div>
+
+
+
+                      </div>
+
+
+
+
+
+
+                      <div>
+
+                      </div>
+
+
+                  </div>
+
+
+
+              </form>
+
+
+          </div>
+      </div>
+  </div>
+
+</div>
+
+<div style="text-align:center">
+  <a href="/usuarios">
+      <img src="../../../assets/images/Icones_Botoes/icone-voltar-png.png" style="max-width:50px" />
+  </a>
+</div>

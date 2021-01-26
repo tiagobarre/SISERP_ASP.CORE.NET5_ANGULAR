@@ -1,0 +1,8 @@
+C:\Curso\Projeto_Tiago_WebApi\Backend\Entidade\bin\Debug\netcoreapp3.1\Entidade.deps.json
+C:\Curso\Projeto_Tiago_WebApi\Backend\Entidade\bin\Debug\netcoreapp3.1\Entidade.dll
+C:\Curso\Projeto_Tiago_WebApi\Backend\Entidade\bin\Debug\netcoreapp3.1\Entidade.pdb
+C:\Curso\Projeto_Tiago_WebApi\Backend\Entidade\obj\Debug\netcoreapp3.1\Entidade.AssemblyInfoInputs.cache
+C:\Curso\Projeto_Tiago_WebApi\Backend\Entidade\obj\Debug\netcoreapp3.1\Entidade.AssemblyInfo.cs
+C:\Curso\Projeto_Tiago_WebApi\Backend\Entidade\obj\Debug\netcoreapp3.1\Entidade.csproj.CoreCompileInputs.cache
+C:\Curso\Projeto_Tiago_WebApi\Backend\Entidade\obj\Debug\netcoreapp3.1\Entidade.dll
+C:\Curso\Projeto_Tiago_WebApi\Backend\Entidade\obj\Debug\netcoreapp3.1\Entidade.pdb

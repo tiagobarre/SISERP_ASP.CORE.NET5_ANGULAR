@@ -1,0 +1,12 @@
+C:\Curso\Projeto_Tiago_WebApi\Backend\Dominio\bin\Debug\netcoreapp3.1\Dominio.deps.json
+C:\Curso\Projeto_Tiago_WebApi\Backend\Dominio\bin\Debug\netcoreapp3.1\Dominio.dll
+C:\Curso\Projeto_Tiago_WebApi\Backend\Dominio\bin\Debug\netcoreapp3.1\Dominio.pdb
+C:\Curso\Projeto_Tiago_WebApi\Backend\Dominio\bin\Debug\netcoreapp3.1\Entidade.dll
+C:\Curso\Projeto_Tiago_WebApi\Backend\Dominio\bin\Debug\netcoreapp3.1\Entidade.pdb
+C:\Curso\Projeto_Tiago_WebApi\Backend\Dominio\obj\Debug\netcoreapp3.1\Dominio.csprojAssemblyReference.cache
+C:\Curso\Projeto_Tiago_WebApi\Backend\Dominio\obj\Debug\netcoreapp3.1\Dominio.AssemblyInfoInputs.cache
+C:\Curso\Projeto_Tiago_WebApi\Backend\Dominio\obj\Debug\netcoreapp3.1\Dominio.AssemblyInfo.cs
+C:\Curso\Projeto_Tiago_WebApi\Backend\Dominio\obj\Debug\netcoreapp3.1\Dominio.csproj.CoreCompileInputs.cache
+C:\Curso\Projeto_Tiago_WebApi\Backend\Dominio\obj\Debug\netcoreapp3.1\Dominio.csproj.CopyComplete
+C:\Curso\Projeto_Tiago_WebApi\Backend\Dominio\obj\Debug\netcoreapp3.1\Dominio.dll
+C:\Curso\Projeto_Tiago_WebApi\Backend\Dominio\obj\Debug\netcoreapp3.1\Dominio.pdb
